@@ -23,7 +23,7 @@ function showList(products) {
             <div class="productDetails">
               <p class="productPrice">${product.discount ? `<span class="originalPrice">${product.price} DKK</span> <span class="discountPrice">${(product.price * (1 - product.discount / 100)).toFixed(2)} DKK</span>` : `${product.price} DKK`}</p>
             </div>
-            <a href="produkt.html?id=${product.id}" class="buyButton">Se mere</a>
+            <a href="produkt.html?id=${product.id}" class="buyButton">Read more</a>
           </div>
         </div>`
     )

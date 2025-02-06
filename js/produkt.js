@@ -34,8 +34,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
               <li>Gender: ${data.gender}</li>
             </ul>
 
-            <div class="add-to-cart-knap">
-              <a href="product.html" class="add-to-cart">ADD TO CART</a>
+            <div class="add-to-cart-knap" ${data.soldout && "no_scale"}>
+              <a href="product.html" class="${data.soldout && "hidden"} add-to-cart">ADD TO BASKET</a>
+                            <a href="product.html" class="add-to-cart-hidden ${data.soldout && "visible"}">SOLD OUT</a>
             </div>
     `;
   });

@@ -102,15 +102,6 @@ body {
   z-index: 5;
   text-align: center;
   white-space: nowrap;
-  border-radius: 5px;
-}
-
-/* Mobiljustering for små skærme */
-@media (max-width: 600px) {
-  .box.soldOut::after {
-    font-size: 1rem;
-    padding: 0.3rem 2rem;
-  }
 }
 
 .sale-banner {
@@ -154,7 +145,7 @@ body {
   transform: scaleX(-1);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 750px) {
   .productContainer {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -163,6 +154,10 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     padding: 2rem;
+  }
+
+  .box.soldOut::after {
+    padding: 1rem 6.3rem;
   }
 }
 
@@ -255,10 +250,38 @@ select {
   border: 1px solid rgb(167, 163, 127);
 }
 
+.add-to-cart-hidden {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(201, 196, 147);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid rgb(167, 163, 127);
+}
+
+.add-to-cart-hidden:hover {
+  background-color: rgb(167, 163, 127);
+  border: 1px solid rgb(167, 163, 127);
+}
+
 .greyed-list-title {
   color: #6d6c6c;
 }
 .greyed-list {
   color: #6d6c6c;
   padding-inline: 2rem;
+}
+
+.add-to-cart-hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
